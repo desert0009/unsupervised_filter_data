@@ -9,7 +9,7 @@ class DIMENSION_REDUCTION_TSNE:
         self.features = embeddings
 
     def t_sne(self, reduce_dim=2):
-        tsne = TSNE(n_components=reduce_dim, learning_rate=150, perplexity=30, angle=0.2, verbose=2).fit_transform(self.features)
+        tsne = TSNE(n_components=reduce_dim, learning_rate=120, perplexity=15, angle=0.2, verbose=2).fit_transform(self.features)
 
         # Normalize the embedding so that lies entirely in the range (0,1)
         tx, ty = tsne[:,0], tsne[:,1]
